@@ -1,0 +1,28 @@
+<!-- Digest Cycle -->
+
+<!DOCTYPE html>
+<html ng-app="CounterApp">
+  <head>
+    <meta charset="utf-8">
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <style> body {font-size: 1.2em;
+    }</style>
+    <title>ng-repeat</title>
+  </head>
+  <body>
+    <h1>The DigestCycle</h1>
+    <div ng-controller="CounterController">
+        <button ng-click = "showNumberOfWatchers()">Log # of Watchers</button>
+        <input type="text" ng-model = "name">
+      <div ng-controller="CounterController">
+        <button ng-click = "countOnce()">upOnce Counter(once)</button>
+        <button ng-click = "upCounter()">Increment Count</button>
+      </div>
+      <div>
+        once Counter : {{ onceCounter }} <br>
+        Regular Counter : {{ counter }}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!--Html code for uppercase filter  -->
+
+<!-- <!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <style> body {font-size: 1.2em;
+    }</style>
+    <title>FIlters</title>
+  </head>
+  <body>
+    <h1>Filters</h1>
+    <div ng-controller="MsgController">
+      {{name}} has message for you : <br>
+      {{sayMessage()}}
+      <div>
+          <button ng-click = "feed()">Feed GGS</button>
+            Cost: {{foodCost | currency : "INR"}}
+          <br>
+          <img ng-src = "/images/{{stateOfBeing}}.png">
+      </div>
+    </div>
+  </body>
+</html> -->
+
+
+<!--Html for custom filters  -->
+
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <style> body {font-size: 1.2em;
+    }</style>
+    <title>Custom Filters</title>
+  </head>
+  <body>
+    <h1>Custom Filters</h1>
+    <div ng-controller="MsgController">
+      {{name}} has message for you : <br>
+      Original : {{sayMessage()}}<br>
+      Loves : {{sayLovesMessage() }}<br>
+      Truth : {{sayLovesMessage() | truth : 'healthy' : 'cookie'}}<br>
+      BigTruth : {{sayLovesMessage() | truth : 'healthy' : 'cookie' | uppercase}}
+      <div>
+          <button ng-click = "feed()">Feed GGS</button><br>
+          <img ng-src = "/images/{{stateOfBeing}}.png">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,12 +1,46 @@
+<!--First Application ExampleCode -->
+
+
+<!-- <!DOCTYPE html>
+<html ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <title>My first Angular App</title>
+  </head>
+  <body>
+    <h1>My First AngularJS App</h1>
+    <!-- What ever we write in div is controlled by myFirstCOntroller// -->
+    <!-- <div ng-controller="myFirstController">
+      <!-- name is defined in js file inside scope object -->
+      <!-- {{name}}<!--object of scope -->
+      <!-- {{sayHello()}} <!--function of scope -->
+      <!-- <input type="text" ng-model="name"><br>
+      Name inside textbox is : {{name}}
+    </div>
+  </body>
+</html> -->
+
 <!DOCTYPE html>
-<html></ <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <style>body {font-size: 1.3em; }</style>
+    <title>Name Calculator</title>
   </head>
-  <body>
-    <h1>Hello World </h1>
-    <p>Welcome GGS</p>
+  <body ng-app="NameCalculator">
+    <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculatorController">
+      <div>
+        Your Name :
+        <input type="text"
+         ng-model= "name"
+         ng-keyup="displayNumeric();">
+      </div>
+      <div>Total Numeric Values is :{{totalvalue}}</div>
+    </div>
   </body>
 </html>

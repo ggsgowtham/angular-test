@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app ="shoppingListApp">
+  <head>
+    <title>ng-repeat</title>
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <style>
+      body { font-size: 1.2em; }
+    </style>
+  </head>
+<body>
+  <h1>ng-repeat</h1>
+  <div controller = "ShoppingListController">
+    <h3>shoppingList :</h3>
+    <!--shopping List #1  -->
+    <input type="text" ng-model = "search">
+    <ul>
+      <li ng-repeat="item in shoppingList | filter : search">{{ item }}</li>
+      <p>what is happening here????</p>
+    </ul>
+    <!-- shopingList #2 -->
+    <!-- <input type="text" ng-model = "shoppingList2[0].quantity">
+    <ul>
+      <li ng-repeat = "item in shoppingList2">Buy {{ item.quantity }} of {{ item.name }}(s)</li>
+    </ul> -->
+  </div>
+</body>
+</html>
